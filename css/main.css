@@ -1,0 +1,146 @@
+@charset 'utf-8';
+@import url("https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  font-size: 62.5%;
+  --main-color: #1b58a6;
+  --main-color-dark: #154787;
+  --skyblue: #86d3e7;
+  --white: #fff;
+  --bd: #d9d9d9;
+}
+
+img {
+  max-width: 100%;
+  /* 아무리 커져도 본인 크기까지만 */
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+a:hover {
+  text-decoration: none;
+}
+hr,
+.hidden {
+  position: absolute;
+  margin: -1px;
+  width: 1px;
+  height: 1px;
+
+  clip: rect(0, 0, 0, 0);
+}
+body {
+  font: 1.6rem/1.5 "montserrat", sans-serif;
+  color: var(--title-color);
+  word-break: keep-all;
+
+  box-sizing: border-box;
+  background: var(--main-color);
+  color: #fff;
+  position: relative;
+  background: var(--main-color);
+  height: 100vh;
+  /* padding-top: 100px; */
+}
+.inner {
+  /* width: 176rem; */
+  width: 90%;
+  margin: 0 auto;
+  /* background: rgba(255, 255, 0, 0.3); */
+}
+
+header {
+  /* background: #fff; */
+  /* color: #fff; */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 10rem;
+  /* background: #55f; */
+  font-weight: 500;
+}
+.gnb {
+  display: flex;
+  margin-right: auto;
+  /* background: #ff5; */
+  z-index: 10;
+  gap: 0.8rem;
+}
+.gnb > li > a {
+  display: block;
+
+  font-size: 1.8rem;
+  border: 3px solid transparent;
+  padding: 10px 24px;
+
+  text-align: center;
+}
+.gnb > li > a.active {
+  border-color: #fff;
+  border-radius: 40px;
+}
+
+#container {
+  font-family: "Lobster", sans-serif;
+  /* background: #f55; */
+}
+
+.title {
+  /* background: #000; */
+  line-height: 1;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.title h1 {
+  font-size: 25rem;
+}
+.title h2 {
+  font-size: 15rem;
+}
+.title h3 {
+  font-size: 12rem;
+}
+.title .wrap {
+  display: flex;
+  gap: 3.2rem;
+  /* background: #f55; */
+}
+
+.menu {
+  /* background: #55f; */
+  /* margin-top: 9.4rem; */
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+}
+
+.menu-list {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+  gap: 20rem;
+}
+.menu-list > li > a {
+  display: block;
+  font-size: 2.5rem;
+  border: 3px solid transparent;
+  padding: 10px 24px;
+
+  text-align: center;
+}
+.menu-list > li > a.active {
+  border-radius: 50%;
+  background: var(--main-color-dark);
+}
