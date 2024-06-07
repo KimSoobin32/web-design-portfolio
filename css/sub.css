@@ -1,0 +1,270 @@
+@charset 'utf-8';
+
+main > section {
+  height: 100vh;
+  padding: 150px 100px;
+}
+
+/* main > section.section1 {
+  background: red;
+}
+main > section.section2 {
+  background: yellow;
+}
+main > section.section3 {
+  background: green;
+} 
+main > section.section6 {
+  background: skyblue;
+}*/
+.fp-controlArrow {
+  background: #000;
+}
+.fp-slidesNav {
+  /* right: 0 !important; */
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  display: inline-block;
+  margin: 0 auto;
+}
+
+.indicator {
+  position: fixed;
+  top: 50%;
+  right: 100px;
+  transform: translateY(-50%);
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; /* aife */
+  gap: 20px;
+
+  z-index: 10;
+}
+.indicator li {
+  width: 20px;
+  height: 20px;
+  border-radius: 20px;
+  background: #9a9a9a;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.indicator li.active {
+  /* width: 60px; */
+  background-color: var(--main-color-dark);
+}
+.indicator li a {
+  display: block;
+  height: 100%;
+}
+.indicator li b {
+  display: none;
+}
+
+.section1 figure {
+  width: 268px;
+  height: 235px;
+  position: relative;
+  margin: 0 auto;
+}
+.section1 figure img {
+  width: 100%;
+  height: 100%;
+}
+
+.section h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Lobster', sans-serif;
+  font-size: 8rem;
+}
+.content-wrap {
+  display: flex;
+  /* background: #f55; */
+  justify-content: center;
+  /* align-items: center; */
+  gap: 26rem;
+  margin-top: 6.5rem;
+}
+.content-wrap article {
+  width: 582px;
+}
+.content-wrap article h3 {
+  font-weight: 500;
+  font-size: 2.5rem;
+}
+.content-wrap article p {
+  margin-top: 2.5rem;
+  font-size: 2rem;
+}
+.content-wrap .index-list {
+  /* background: #55f; */
+  font-size: 3.5rem;
+}
+.content-wrap .index-list li {
+  margin-bottom: 3rem;
+}
+
+/* project */
+.section:not(.section1) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16.5rem;
+}
+.section {
+  position: relative;
+}
+.section .num-indicator {
+  position: absolute;
+  top: 50%;
+  left: 100px;
+  transform: translateY(-50%);
+
+  /* display: flex !important; */
+  /* flex-direction: column; */
+  /* align-items: flex-end; */
+  gap: 20px;
+
+  z-index: 10;
+}
+.section .num-indicator .num-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  line-height: 1;
+}
+.section .num-indicator .num-wrap .current-page {
+  font-size: 6.5rem;
+}
+.section .num-indicator .num-wrap .seperator {
+  font-size: 5rem;
+}
+.section .num-indicator .num-wrap .total-page {
+  font-size: 3.2rem;
+}
+.section .num-indicator p {
+  font-size: 1.6rem;
+}
+
+.slider-wrap {
+  position: relative;
+}
+.section6 .main-slider {
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+
+  overflow: hidden;
+  position: relative;
+  /* background: #55f; */
+}
+.section6 .main-slider .slide {
+  /* width: 100%;
+  height: 100%; */
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  /* position: absolute;
+  top: 0;
+  left: 0; */
+  border-radius: 50%;
+  background: no-repeat 0 0 / cover;
+  overflow: hidden;
+  background: yellow;
+}
+.section6 .main-slider .slide .project-img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+}
+.section6 .main-slider .slide .project-img img {
+  max-width: 100%;
+}
+
+.section6 .bubble {
+  position: absolute;
+  width: 162px;
+  height: 162px;
+  background: skyblue;
+  z-index: 10;
+  bottom: 0;
+  right: 0;
+}
+
+.project-img {
+  position: relative;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+}
+
+.bubble {
+  background: #ff5;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  position: relative;
+}
+
+.bubble-small {
+  position: absolute;
+  top: 0;
+  width: 50px;
+  height: 50px;
+  background: #f55;
+  border-radius: 50%;
+  z-index: 10;
+}
+
+.project-img img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 870px !important;
+}
+.project-content {
+  width: 500px;
+}
+
+.project-description h2 {
+  font-size: 6rem;
+}
+.project-description p {
+  margin-top: 3.2rem;
+  font-size: 2rem;
+}
+.project-info {
+  margin-top: 54px;
+}
+.project-info ul {
+  display: flex;
+  gap: 5.8rem;
+}
+.btn-wrap {
+  margin-top: 6.8rem;
+  display: flex;
+
+  gap: 4rem;
+  font-family: 'Lobster', sans-serif;
+  font-weight: 400;
+}
+.btn-wrap a {
+  display: block;
+  font-size: 2.5rem;
+  padding: 10px 30px;
+  border-radius: 50%;
+  text-align: center;
+}
+.btn-wrap a.btn-design {
+  background: var(--main-color-dark);
+  color: #fff;
+}
+.btn-wrap a.btn-process {
+  background: #fff;
+  border: 1px solid var(--bd);
+}

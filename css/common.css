@@ -1,5 +1,7 @@
 @charset 'utf-8';
 @import url('https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 :root {
   font-size: 62.5%;
   --main-color: #1b58a6;
@@ -9,9 +11,6 @@
   --bd: #d9d9d9;
 }
 
-img {
-  max-width: 100%;
-}
 a {
   text-decoration: none;
   color: inherit;
@@ -29,16 +28,15 @@ hr,
   clip: rect(0, 0, 0, 0);
 }
 body {
-  font: 1.6rem/1.5 'montserrat', sans-serif;
+  font: 1.6rem/1.5 'montserrat', 'Pretendard', sans-serif;
   color: var(--title-color);
   word-break: keep-all;
 
   box-sizing: border-box;
 
-  color: #fff;
   position: relative;
-  background: var(--main-color);
-  height: 100vh;
+
+  /* height: 100vh; */
   /* padding-top: 100px; */
 }
 .inner {
@@ -60,7 +58,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 9rem;
+  height: 10rem;
   /* background: #55f; */
   font-weight: 500;
 }
@@ -76,69 +74,11 @@ header {
 
   font-size: 1.8rem;
   border: 3px solid transparent;
-  padding: 10px 24px;
-
-  text-align: center;
-}
-.gnb > li > a.active {
-  border-color: #fff;
-  border-radius: 40px;
-}
-
-#container {
-  font-family: 'Lobster', sans-serif;
-  /* background: #f55; */
-}
-
-.title {
-  /* background: #000; */
-  line-height: 1;
-  position: absolute;
-  top: 45%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-.title h1 {
-  font-size: 25rem;
-}
-.title h2 {
-  font-size: 15rem;
-}
-.title h3 {
-  font-size: 12rem;
-}
-.title .wrap {
-  display: flex;
-  gap: 3.2rem;
-  /* background: #f55; */
-}
-
-.menu {
-  /* background: #55f; */
-  /* margin-top: 9.4rem; */
-  position: absolute;
-  bottom: 10%;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100%;
-}
-
-.menu-list {
-  display: flex;
-
-  justify-content: center;
-  align-items: center;
-  gap: 20rem;
-}
-.menu-list > li > a {
-  display: block;
-  font-size: 2.5rem;
-  border: 3px solid transparent;
   padding: 7px 24px;
 
   text-align: center;
 }
-.menu-list > li > a:hover {
-  border-radius: 50%;
-  background: var(--main-color-dark);
+.gnb > li > a.active {
+  border-color: #000;
+  border-radius: 40px;
 }
