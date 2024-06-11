@@ -210,10 +210,10 @@ header {
 
 @keyframes shark-ani {
   0% {
-    transform: translateX(-50px);
+    transform: translateX(-20px);
   }
   100% {
-    transform: translateX(50px);
+    transform: translateX(20px);
   }
 }
 
@@ -224,4 +224,110 @@ header {
   100% {
     transform: translateY(0px);
   }
+}
+
+/* fish */
+.dolphin-wrap {
+  position: absolute;
+  right: 400px;
+  top: 300px;
+}
+.fish-wrapper {
+  position: absolute;
+  left: 82px;
+  bottom: 85px;
+  /* height: 20px; */
+  /* width: 54px; */
+  /* right: 433px;
+  top: 200px; */
+  width: 200px;
+  height: 200px;
+  display: block;
+  z-index: 4;
+}
+
+.fish-wrap {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  /* height: 20px;
+  width: 54px; */
+  width: 100px;
+  height: 100px;
+  display: block;
+  z-index: 4;
+  transform-origin: center center;
+  transform: translate(-35px, 60px) rotate(-90deg);
+  animation: moveFish 3.5s linear infinite;
+}
+@keyframes moveFish {
+  0% {
+    transform: translate(-35px, 128px) rotate(-90deg);
+  }
+  5% {
+    transform: translate(20px, 128px) rotate(90deg);
+  }
+  45% {
+    transform: translate(20px, 128px) rotate(90deg);
+  }
+  50% {
+    transform: translate(10px, 10px) rotate(35deg);
+  }
+  /* 58% {
+    transform: translate(0, -15px) rotate(0);
+  } */
+
+  67% {
+    transform: translate(0, -15px) rotate(0);
+  }
+  75% {
+    transform: translate(-20px, 10px) rotate(-65deg);
+  }
+  80% {
+    transform: translate(-35px, 128px) rotate(-90deg);
+  }
+  100% {
+    transform: translate(-35px, 128px) rotate(-90deg);
+  }
+}
+
+.fish {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
+  width: 70px;
+  height: 70px;
+  display: block;
+  z-index: 4;
+
+  background: url(../img/dolphin.png) no-repeat 50% / contain;
+}
+
+/* ddfsdf */
+.water-wrapper {
+  position: absolute;
+  left: 65px;
+  bottom: -100px;
+
+  /* height: 70px;
+  width: 77px; */
+  width: 300px;
+  height: 300px;
+  display: block;
+  z-index: 6;
+  overflow: hidden;
+}
+
+.water {
+  position: absolute;
+  left: 0;
+  bottom: -100px;
+  /* height: 70px;
+  width: 77px; */
+  width: 300px;
+  height: 300px;
+  display: block;
+  z-index: 6;
+  background-color: var(--main-color);
 }
