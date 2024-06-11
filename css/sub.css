@@ -32,9 +32,9 @@ main > section.section6 {
 .fp-slidesNav {
   /* right: 0 !important; */
   left: 50% !important;
+
   transform: translateX(-50%) !important;
   display: inline-block;
-  margin: 0 auto;
 }
 
 .indicator {
@@ -54,9 +54,14 @@ main > section.section6 {
   width: 20px;
   height: 20px;
   border-radius: 20px;
-  background: #9a9a9a;
+  background: #fff;
+  border: transparent;
+  /* border: 1px solid var(--bd); */
   transition: 0.3s;
   cursor: pointer;
+}
+.indicator li.show {
+  border: 1px solid var(--bd);
 }
 .indicator li.active {
   /* width: 60px; */
@@ -399,7 +404,7 @@ main > section.section6 {
 }
 .btn-wrap a.btn-process {
   background: #fff;
-  border: 1px solid var(--bd);
+  /* border: 1px solid var(--bd); */
 }
 
 /* skills */
@@ -430,3 +435,7 @@ main > section.section6 {
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+/* 80%로 놓고 작업.. 단 1920에서 깨지는 느낌 없이
+인디케이터- 흰색
+kimsoobin lobster, 글자 크게 */
