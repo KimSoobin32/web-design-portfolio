@@ -4,10 +4,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>포트폴리오.</title>
+  <title>About me</title>
   <link rel="stylesheet" href="./css/reset.css" />
   <link rel="stylesheet" href="./css/common.css" />
-  <link rel="stylesheet" href="./css/main.css" />
+  <link rel="stylesheet" href="./css/sub.css" />
   <script src="./js/jquery-3.3.1.min.js"></script>
   <script src="./js/modal.js"></script>
 </head>
@@ -35,10 +35,10 @@
       <nav class="nav">
         <ul class="gnb">
           <li>
-            <a href="./index.html" class="active">Home</a>
+            <a href="./index.html">Home</a>
           </li>
           <li>
-            <a href="./aboutMe.html">About me</a>
+            <a href="#" class="active">About me</a>
           </li>
           <li>
             <a href="./work.html">Work</a>
@@ -54,32 +54,24 @@
   <hr />
   <!-- e: header  -->
   <main id="container">
-
-    <div class="ocean">
-      <figure class="shark-img"><img src="./img/shark.png" alt="tube"></figure>
-      <figure class="tube-img"><img src="./img/tube.png" alt="tube"></figure>
-      <div class="title">
-        <h1>Surf</h1>
-        <div class="wrap">
-          <h3>my</h3>
-          <h2>portfolio</h2>
-        </div>
+    <section class="section section1">
+      <div class="title-wrap">
+        <figure>
+          <h1>About me</h1>
+          <img src="./img/water.svg" alt="water" />
+        </figure>
       </div>
-
-      <div class="menu">
-        <ul class="menu-list">
-          <li>
-            <a href="./aboutMe.html">About me</a>
-          </li>
-          <li>
-            <a href="/work.html">Work</a>
-          </li>
-          <li>
-            <a href="#" class="contact-btn">Contact</a>
-          </li>
-        </ul>
-      </div>
-    </div>
+    </section>
+    <section class="skills">
+      <h1>SKILLS</h1>
+      <ul>
+        <li><img src="./img/ps-ico.png" alt="ps"></li>
+        <li><img src="./img/ai-ico.png" alt="ps"></li>
+        <li><img src="./img/fig-ico.png" alt="ps"></li>
+        <li><img src="./img/vs-ico.png" alt="ps"></li>
+        <li><img src="./img/jquery.png" alt="ps"></li>
+      </ul>
+    </section>
   </main>
 </body>
 

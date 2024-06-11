@@ -1,5 +1,5 @@
 @charset 'utf-8';
-@import url("https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 :root {
   font-size: 62.5%;
   --main-color: #1b58a6;
@@ -29,7 +29,7 @@ hr,
   clip: rect(0, 0, 0, 0);
 }
 body {
-  font: 1.6rem/1.5 "montserrat", sans-serif;
+  font: 1.6rem/1.5 'montserrat', sans-serif;
   color: var(--title-color);
   word-break: keep-all;
 
@@ -60,7 +60,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 9rem;
+  height: 10rem;
   /* background: #55f; */
   font-weight: 500;
 }
@@ -76,17 +76,28 @@ header {
 
   font-size: 1.8rem;
   border: 3px solid transparent;
-  padding: 10px 24px;
+  padding: 7px 24px;
+  border-radius: 60px;
 
   text-align: center;
 }
 .gnb > li > a.active {
   border-color: #fff;
-  border-radius: 40px;
+}
+.gnb .contact-btn {
+  border-color: transparent;
+  background: #fff;
+  color: var(--main-color);
+  transition: 0.4s;
+  margin-left: 2rem;
+}
+.gnb .contact-btn:hover {
+  background: var(--main-color-dark);
+  color: #fff;
 }
 
 #container {
-  font-family: "Lobster", sans-serif;
+  font-family: 'Lobster', sans-serif;
   /* background: #f55; */
 }
 
@@ -135,6 +146,7 @@ header {
   font-size: 2.5rem;
   border: 3px solid transparent;
   padding: 7px 24px;
+  padding: 10px 25px;
 
   text-align: center;
   border-radius: 50%;
@@ -142,4 +154,15 @@ header {
 }
 .menu-list > li > a:hover {
   background: var(--main-color-dark);
+}
+
+.shark-img {
+  position: fixed;
+  top: 250px;
+  left: 233px;
+}
+.tube-img {
+  position: fixed;
+  top: 420px;
+  right: 181px;
 }
