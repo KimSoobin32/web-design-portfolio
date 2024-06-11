@@ -96,7 +96,7 @@ header {
 
 .contact-modal {
   display: none;
-  position: absolute; /* 화면 전체에 대한 고정 위치 */
+  position: fixed; /* 화면 전체에 대한 고정 위치 */
   z-index: 99;
   left: 50%;
   top: 50%;
