@@ -120,7 +120,7 @@ main > section.section6 {
   font-size: 3.5rem;
 }
 .content-wrap .index-list li {
-  margin-bottom: 2.5rem;
+  margin-bottom: 3.5rem;
 }
 
 /* project */
@@ -397,14 +397,22 @@ main > section.section6 {
   padding: 10px 30px;
   border-radius: 50%;
   text-align: center;
+  transition: 0.4s;
 }
 .btn-wrap a.btn-design {
   background: var(--main-color-dark);
   color: #fff;
 }
+.btn-wrap a.btn-design:hover {
+  background: #000;
+}
 .btn-wrap a.btn-process {
   background: #fff;
   /* border: 1px solid var(--bd); */
+}
+.btn-wrap a.btn-process:hover {
+  background: #000;
+  color: #fff;
 }
 
 /* skills */
