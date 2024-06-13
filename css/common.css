@@ -103,6 +103,9 @@ header {
   left: 0;
   width: 100%;
 }
+.title-wrap {
+  padding-top: 100px;
+}
 
 .nav {
   display: flex;

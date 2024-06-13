@@ -183,9 +183,8 @@ main > section.section6 {
 } */
 .img-box {
   background: #fff;
-  border: 1px solid #000;
-  /* width: 360px;
-  height: 400px; */
+  /* border: 1px solid #000; */
+
   width: 200px;
   height: 200px;
   border-radius: 20px;
@@ -305,6 +304,10 @@ main > section.section6 {
   z-index: 10;
   bottom: 0;
   right: 0;
+  transition: 0.4s;
+}
+.section6 .bubble:hover {
+  background-image: linear-gradient(to bottom right, #87e5ff, #8bbdff);
 }
 .section6 .bubble a {
   display: block;
@@ -473,6 +476,9 @@ main > section.section6 {
   display: flex;
   gap: 5.8rem;
 }
+.project-info ul li dl dt {
+  font-weight: 600;
+}
 .btn-wrap {
   margin-top: 6.8rem;
   display: flex;
@@ -525,15 +531,31 @@ main > section.section6 {
   border-radius: 50%;
   position: relative;
 }
+
 .skills ul li img {
-  /* display: block;
-  margin: 0 auto; */
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) scale(0.8);
 }
 
 /* 80%로 놓고 작업.. 단 1920에서 깨지는 느낌 없이
 인디케이터- 흰색
-kimsoobin lobster, 글자 크게 */
+kimsoobin lobster, 글자 크게 
+
+---
+kimsoobin 누르면 효과.. 사진 나온다던지 연락 주세요.. 라던가..
+
+
+
+- about me ->skills 원 너무 큼.. 안에 ps 이런것도 크기 좀 줄이자 상대적으로 
+scale 이용 
+효과 줄거면 원크기는 놓아두던지
+
+메인
+D:\UIUX-김수빈\07-jQuery\WEB-UI\07-mouse\01-change-cursor
+참고해서
+cursor background 넣지 말고 div 따로 만들어서
+
+효과는 하단 메뉴 영역 들어가면 서퍼모양이 작아지고 dive 커지는 효과
+*/
