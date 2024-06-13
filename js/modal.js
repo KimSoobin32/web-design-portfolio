@@ -8,7 +8,6 @@ $(function () {
   }
 
   function openContact() {
-    console.log('aaa');
     $('.contact-modal').css('display', 'block');
     $('.dim').css('display', 'block');
   }
@@ -43,5 +42,42 @@ $(function () {
 
   $('.contact-btn').on('click', function () {
     openContact();
+  });
+  //gnb 효과
+  const gnb = document.querySelector('.gnb');
+  const indicator = document.createElement('span');
+  indicator.classList.add('indicator-line');
+  gnb.appendChild(indicator);
+
+  // 초기에 indicator 숨기기
+  indicator.style.width = `0px`;
+  indicator.style.borderColor = 'transparent';
+  indicator.style.height = '48px'; // 높이 설정
+
+  gnb.addEventListener('mousemove', (e) => {
+    const link = e.target.closest('a'); // 이벤트가 발생한 요소의 가장 가까운 <a> 태그 찾기
+    if (link && !link.classList.contains('contact-btn')) {
+      const rect = link.getBoundingClientRect();
+      const gnbRect = gnb.getBoundingClientRect();
+
+      // indicator.style.borderColor 설정
+      if (link.classList.contains('active')) {
+        indicator.style.borderColor = 'transparent'; // active 클래스일 경우 투명하게 설정
+      } else if (window.location.pathname.includes('index.html')) {
+        indicator.style.backgroundColor = '#154787';
+      } else {
+        indicator.style.backgroundColor = '#E3F9FF';
+      }
+
+      indicator.style.color = '#55f';
+      indicator.style.width = `${rect.width}px`;
+      indicator.style.left = `${rect.left - gnbRect.left}px`;
+    }
+  });
+
+  gnb.addEventListener('mouseleave', () => {
+    indicator.style.width = `0px`;
+    indicator.style.borderColor = 'transparent';
+    indicator.style.backgroundColor = 'transparent';
   });
 });

@@ -84,25 +84,67 @@ header {
   display: block;
 
   font-size: 1.8rem;
-  border: 3px solid transparent;
-  padding: 7px 24px;
+  /* border: 3px solid transparent; */
+  padding: 10px 24px;
   border-radius: 60px;
 
   text-align: center;
+  position: relative;
 }
-.gnb > li > a.active {
+.gnb > li > a.active:hover {
+  background: var(--main-color-dark);
+}
+.gnb > li > a:not(.contact-btn).active:before {
+  content: '';
+  display: block;
+  height: 45px;
+  width: 100%;
+  border: 3px solid #fff;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  bottom: 0;
+
+  border-radius: 50px;
+}
+
+/* .gnb > li > a.active {
   border-color: #fff;
-}
-.gnb .contact-btn {
+} */
+/* .gnb .contact-btn {
   border-color: transparent;
   background: #fff;
   color: var(--main-color);
   transition: 0.4s;
   margin-left: 2rem;
-}
-.gnb .contact-btn:hover {
-  background: var(--main-color-dark);
+} */
+.gnb .contact-btn {
+  border-color: transparent;
+  /* background: #000; */
   color: #fff;
+  transition: 0.4s;
+  margin-left: 2rem;
+}
+.gnb > li > a.contact-btn::before {
+  content: '';
+  display: block;
+  height: 45px;
+  width: 100%;
+  color: #fff;
+  /* border: 3px solid #000; */
+  background: #000;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  bottom: 0;
+  z-index: -1;
+  border-radius: 50px;
+  transition: 0.4s;
+}
+.gnb .contact-btn:hover::before {
+  background: var(--main-color-dark);
 }
 
 #container {

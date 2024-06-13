@@ -46,9 +46,8 @@ body {
   /* background: rgba(255, 255, 0, 0.3); */
 }
 
-header {
-  /* background: #fff; */
-  /* color: #fff; */
+/* header {
+
   position: absolute;
   top: 0;
   left: 0;
@@ -59,7 +58,7 @@ header {
   justify-content: space-between;
   align-items: center;
   height: 10rem;
-  /* background: #55f; */
+
   font-weight: 500;
 }
 .myName {
@@ -70,7 +69,7 @@ header {
 .gnb {
   display: flex;
   margin-right: auto;
-  /* background: #ff5; */
+
   z-index: 10;
   gap: 0.8rem;
 }
@@ -97,6 +96,98 @@ header {
 .gnb .contact-btn:hover {
   background: var(--main-color-dark);
   color: #fff;
+} */
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 10rem;
+  font-weight: 500;
+}
+
+.myName {
+  z-index: 10;
+  font-family: 'lobster', sans-serif;
+  font-size: 3rem;
+}
+
+.gnb {
+  display: flex;
+  margin-right: auto;
+  z-index: 10;
+  gap: 0.8rem;
+  position: relative;
+}
+
+.gnb > li {
+  position: relative;
+}
+
+.gnb > li > a {
+  display: block;
+  font-size: 1.8rem;
+  padding: 10px 24px;
+  border-radius: 60px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.gnb > li > a.active {
+  border-color: #000;
+}
+.gnb > li > a.active:hover {
+  /* background: var(--skyblue); */
+  background-color: #e3f9ff;
+}
+
+.gnb .contact-btn {
+  border-color: transparent;
+  /* background: #000; */
+  color: #fff;
+  transition: 0.4s;
+  margin-left: 2rem;
+}
+.gnb > li > a.contact-btn::before {
+  content: '';
+  display: block;
+  height: 45px;
+  width: 100%;
+  color: #fff;
+  border: 3px solid #000;
+  background: #000;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  bottom: 0;
+  z-index: -1;
+  border-radius: 50px;
+}
+.gnb .contact-btn:hover::before {
+  background: var(--main-color-dark);
+}
+
+.indicator-line {
+  position: absolute;
+  /* height: 3px;
+  height: 110px; */
+  border: 3px solid;
+  /* background-color: #000; */
+  bottom: 0;
+  left: 0;
+
+  width: 0;
+  transition: width 0.3s, left 0.3s;
+  z-index: 0;
+  border-radius: 50px;
 }
 
 .contact-modal {
