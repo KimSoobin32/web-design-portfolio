@@ -1,16 +1,7 @@
 $(function () {
+  const $gnb = $('.gnb');
   const $cursor = $('.cursor');
-
-  // if ($('.dim').css('display') === 'block') {
-  //   console.log('dddfsffd');
-  //   $cursor.css('display', 'none');
-  //   document.body.style.cursor = 'default';
-  //   $('#ripple-container').hide();
-  // } else {
-  //   $cursor.css('display', 'block'); // 커서 이미지를 다시 보임
-  //   document.body.style.cursor = 'none'; // 커서 이미지를 사용
-  // }
-
+  let isContactOpen = false;
   // 모달 열기
   function openModal(imageSrc) {
     $('#modal-img').attr('src', imageSrc);
@@ -19,9 +10,9 @@ $(function () {
   }
 
   function openContact() {
-    $('#ripple-container').hide();
     $('.contact-modal').css('display', 'block');
     $('.dim').css('display', 'block');
+    isContactOpen = true;
   }
 
   // 모달 닫기
@@ -29,10 +20,7 @@ $(function () {
     $(modalName).css('display', 'none');
     $('.dim').css('display', 'none');
     $('.modal-dim').css('display', 'none');
-
-    // $cursor.css('display', 'block'); // 커서 이미지를 다시 보임
-    // document.body.style.cursor = 'none'; // 커서 이미지를 사용
-    // $('#ripple-container').show();
+    isContactOpen = false;
   }
 
   // 모달 닫기 버튼 클릭 이벤트 처리
@@ -65,8 +53,29 @@ $(function () {
     $(btn).on('click', function () {
       $cursor.css('display', 'none');
       $('body').css('cursor', 'default');
+      $('#ripple-container').hide();
       openContact();
     });
+  });
+
+  // gnb 영역에 마우스가 들어갈 때
+  $gnb.on('mouseenter', function () {
+    $cursor.css('display', 'none'); // 커서 이미지를 숨김
+    document.body.style.cursor = 'default'; // 기본 커서 모양으로 변경
+    rippleEnabled = false; // ripple 비활성화
+  });
+
+  // gnb 영역에서 마우스가 나갈 때
+  $gnb.on('mouseleave', function () {
+    if (!isContactOpen) {
+      $cursor.css('display', 'block'); // 커서 이미지를 다시 보임
+      document.body.style.cursor = 'none'; // 커서 이미지를 사용
+      rippleEnabled = true; // ripple 비활성화
+    } else {
+      $cursor.css('display', 'none'); // 커서 이미지를 숨김
+      document.body.style.cursor = 'default'; // 기본 커서 모양으로 변경
+      rippleEnabled = false; // ripple 비활성화
+    }
   });
 
   //gnb 효과
