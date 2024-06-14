@@ -1,4 +1,7 @@
 @charset 'utf-8';
+body {
+  cursor: default !important;
+}
 .gnb > li > a:not(.contact-btn).active:before {
   content: '';
   display: block;

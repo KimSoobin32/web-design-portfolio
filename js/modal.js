@@ -1,13 +1,25 @@
 $(function () {
+  const $cursor = $('.cursor');
+
+  // if ($('.dim').css('display') === 'block') {
+  //   console.log('dddfsffd');
+  //   $cursor.css('display', 'none');
+  //   document.body.style.cursor = 'default';
+  //   $('#ripple-container').hide();
+  // } else {
+  //   $cursor.css('display', 'block'); // 커서 이미지를 다시 보임
+  //   document.body.style.cursor = 'none'; // 커서 이미지를 사용
+  // }
+
   // 모달 열기
   function openModal(imageSrc) {
-    console.log(imageSrc);
     $('#modal-img').attr('src', imageSrc);
     $('#modal').css('display', 'block');
     $('.modal-dim').css('display', 'block');
   }
 
   function openContact() {
+    $('#ripple-container').hide();
     $('.contact-modal').css('display', 'block');
     $('.dim').css('display', 'block');
   }
@@ -17,6 +29,10 @@ $(function () {
     $(modalName).css('display', 'none');
     $('.dim').css('display', 'none');
     $('.modal-dim').css('display', 'none');
+
+    // $cursor.css('display', 'block'); // 커서 이미지를 다시 보임
+    // document.body.style.cursor = 'none'; // 커서 이미지를 사용
+    // $('#ripple-container').show();
   }
 
   // 모달 닫기 버튼 클릭 이벤트 처리
@@ -25,6 +41,9 @@ $(function () {
   });
 
   $('#contact-close').on('click', function () {
+    $cursor.css('display', 'block');
+    $('body').css('cursor', 'none');
+    $('#ripple-container').show();
     closeModal('.contact-modal');
   });
 
@@ -40,9 +59,16 @@ $(function () {
     openModal(src);
   });
 
-  $('.contact-btn').on('click', function () {
-    openContact();
+  console.log($('.menu-list li:last, .gnb li:last'));
+
+  $('.contact-btn').each((index, btn) => {
+    $(btn).on('click', function () {
+      $cursor.css('display', 'none');
+      $('body').css('cursor', 'default');
+      openContact();
+    });
   });
+
   //gnb 효과
   const gnb = document.querySelector('.gnb');
   const indicator = document.createElement('span');

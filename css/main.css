@@ -42,9 +42,49 @@ body {
   /* padding-top: 100px; */
 
   overflow: hidden;
-  /* cursor: none; */
-  cursor: url(../img/surfer.png) 64 64, auto;
+  cursor: none;
+  /* cursor: url(../img/surfer.png) 64 64, auto; */
 }
+
+/* .cursor {
+  position: absolute;
+  z-index: 99;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 128px;
+  height: 128px;
+  background: url(../img/surfer.png) no-repeat 0 0 / contain;
+  
+  pointer-events: none;
+  user-select: none;
+} */
+/* ddd */
+.cursor,
+.dive {
+  position: absolute;
+  z-index: 19;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  user-select: none;
+}
+
+.cursor {
+  width: 128px;
+  height: 128px;
+  background: url('../img/surfer.png') no-repeat 0 0 / contain;
+}
+
+.dive {
+  width: 0;
+  height: 0;
+  background: url('../img/dive.png') no-repeat 50% 50% / contain;
+
+  opacity: 0;
+}
+/* ddd e */
 
 .inner {
   /* width: 176rem; */
@@ -162,13 +202,14 @@ header {
   z-index: 10;
 }
 .title h1 {
-  font-size: 25rem;
+  font-size: 30rem;
+  /* font-size: 35rem; */
 }
 .title h2 {
-  font-size: 15rem;
+  font-size: 20rem;
 }
 .title h3 {
-  font-size: 12rem;
+  font-size: 17rem;
 }
 .title .wrap {
   display: flex;
@@ -208,21 +249,28 @@ header {
   height: 100%;
 }
 
-.menu-list > li > a:hover {
+/* dive */
+/* .menu-list > li > a:hover {
   background: var(--main-color-dark);
   cursor: url(../img/dive.png) 45 45, auto;
+} */
+.menu-list > li > a {
+  background: var(--main-color-dark);
 }
 
 .shark-img {
   position: fixed;
-  top: 300px;
-  left: 500px;
+  /* top: 300px; */
+  top: 20%;
+  left: 20%;
   animation: shark-ani 2s linear infinite alternate;
 }
 .tube-img {
   position: fixed;
-  bottom: 300px;
-  right: 400px;
+  /* bottom: 380px; */
+  /* right: 430px; */
+  right: 20%;
+  bottom: 20%;
   animation: tube-ani 1s linear infinite alternate;
 }
 
@@ -277,8 +325,10 @@ header {
 /* fish */
 .dolphin-wrap {
   position: absolute;
-  right: 800px;
-  top: 400px;
+  /* right: 800px; */
+  right: 45%;
+  /* top: 400px; */
+  top: 50%;
 }
 .fish-wrapper {
   position: absolute;
