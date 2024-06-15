@@ -184,7 +184,8 @@ header {
   transition: 0.4s;
 }
 .gnb .contact-btn:hover::before {
-  background: var(--main-color-dark);
+  background: var(--skyblue);
+  transition: 0.4s;
 }
 
 #container {

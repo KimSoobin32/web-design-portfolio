@@ -164,7 +164,7 @@ header {
   height: 45px;
   width: 100%;
   color: #fff;
-  border: 3px solid #000;
+  /* border: 3px solid #000; */
   background: #000;
   position: absolute;
   top: 45%;
@@ -173,9 +173,11 @@ header {
   bottom: 0;
   z-index: -1;
   border-radius: 50px;
+  transition: 0.4s;
 }
 .gnb .contact-btn:hover::before {
-  background: var(--main-color-dark);
+  background: var(--skyblue);
+  transition: 0.4s;
 }
 
 .indicator-line {
