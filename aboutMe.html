@@ -1,84 +1,130 @@
 <!DOCTYPE html>
 <html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About me</title>
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/sub.css" />
+    <link rel="stylesheet" href="./css/common.css" />
+    <script src="./js/jquery-3.3.1.min.js"></script>
+    <script src="./js/modal.js"></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About me</title>
-  <link rel="stylesheet" href="./css/reset.css" />
-  <link rel="stylesheet" href="./css/sub.css" />
-  <link rel="stylesheet" href="./css/common.css" />
-  <script src="./js/jquery-3.3.1.min.js"></script>
-  <script src="./js/modal.js"></script>
+  <body>
+    <a href="#container" class="skip hidden">본문 바로가기</a>
 
-</head>
-
-<body>
-  <a href="#container" class="skip hidden">본문 바로가기</a>
-
-  <div class="dim"></div>
-  <div class="contact-modal">
-    <div class="contact-content">
-      <!-- <img src="./img/water.svg" alt="modal image" id="modal-img" /> -->
-      <div class="ring">
-        <i style="--clr:#B8F0FF;"></i>
-        <i style="--clr:#80B7FF;"></i>
-        <i style="--clr:#86d3e7;"></i>
+    <div class="dim"></div>
+    <div class="contact-modal">
+      <div class="contact-content">
+        <!-- <img src="./img/water.svg" alt="modal image" id="modal-img" /> -->
+        <div class="ring">
+          <i style="--clr: #b8f0ff"></i>
+          <i style="--clr: #80b7ff"></i>
+          <i style="--clr: #86d3e7"></i>
+        </div>
+        <div class="contact-info">
+          <h2>Kim Soobin</h2>
+          <ul>
+            <li>010-1234-5678</li>
+            <li>jwe06120@naver.com</li>
+          </ul>
+        </div>
+        <span class="close" id="contact-close"
+          ><img src="./img/ico-close.svg" alt="close"
+        /></span>
       </div>
-      <div class="contact-info">
-        <h2>Kim Soobin</h2>
-        <ul>
-          <li>010-1234-5678</li>
-          <li>jwe06120@naver.com</li>
-        </ul>
-      </div>
-      <span class="close" id="contact-close"><img src="./img/ico-close.svg" alt="close" /></span>
     </div>
-  </div>
-  <!-- s: header -->
-  <header id="header">
-    <div class="inner">
-      <nav class="nav">
-        <ul class="gnb">
-          <li>
-            <a href="./index.html">Home</a>
-          </li>
-          <li>
-            <a href="#" class="active">About me</a>
-          </li>
-          <li>
-            <a href="./work.html">Work</a>
-          </li>
-          <li>
-            <a href="#" class="contact-btn">Contact</a>
-          </li>
-        </ul>
-        <span class="myName">Kim Soobin</span>
-      </nav>
-    </div>
-  </header>
-  <hr />
-  <!-- e: header  -->
-  <main id="container">
-    <section class="section section1">
-      <div class="title-wrap">
-        <figure>
-          <h1>About me</h1>
-          <img src="./img/water.svg" alt="water" />
-        </figure>
-      </div>
-    </section>
-    <section class="skills">
-      <h1>SKILLS</h1>
-      <ul>
-        <li><img src="./img/ps-ico.png" alt="ps"></li>
-        <li><img src="./img/ai-ico.png" alt="ps"></li>
-        <li><img src="./img/fig-ico.png" alt="ps"></li>
-        <li><img src="./img/vs-ico.png" alt="ps"></li>
-        <li><img src="./img/jquery.png" alt="ps"></li>
-      </ul>
-    </section>
-  </main>
-</body>
 
+    <div id="background-wrap">
+      <div class="about-bubble x1"></div>
+      <div class="about-bubble x2"></div>
+      <div class="about-bubble x3"></div>
+      <div class="about-bubble x4"></div>
+      <div class="about-bubble x5"></div>
+      <div class="about-bubble x6"></div>
+      <div class="about-bubble x7"></div>
+      <div class="about-bubble x8"></div>
+      <div class="about-bubble x9"></div>
+      <div class="about-bubble x10"></div>
+    </div>
+    <!-- s: header -->
+    <header id="header">
+      <div class="inner">
+        <nav class="nav">
+          <ul class="gnb">
+            <li>
+              <a href="./index.html">Home</a>
+            </li>
+            <li>
+              <a href="#" class="active">About me</a>
+            </li>
+            <li>
+              <a href="./work.html">Work</a>
+            </li>
+            <li>
+              <a href="#" class="contact-btn">Contact</a>
+            </li>
+          </ul>
+          <span class="myName">Kim Soobin</span>
+        </nav>
+      </div>
+    </header>
+    <hr />
+    <!-- e: header  -->
+    <main id="container">
+      <div class="about-inner">
+        <section class="section section1">
+          <div class="title-wrap">
+            <figure>
+              <h1>About me</h1>
+              <img src="./img/water.svg" alt="water" />
+            </figure>
+          </div>
+        </section>
+        <section class="story my-journey">
+          <div class="bg-bb"></div>
+          <h1>My Journey</h1>
+          <p>
+            저는 효율적이고 편리한 솔루션을 만드는 것에 흥미를 느껴 컴퓨터 정보
+            전공을 선택하였습니다.<br />
+            개발자로서 여러 프로젝트를 진행하면서, 자연스럽게 다양한 웹사이트를
+            접하게 되었고<br />
+            이 과정에서 사람들이 직접 사용하는 화면과 인터페이스에 더욱 관심을
+            가지게 되었습니다.<br /><br />
+            또한 오류 해결 및 테스트 단계에서 한 동작을 여러번 반복적으로
+            수행해야 하는 과정을 통해<br />
+            사용자들이 웹사이트를 더 편리하게 사용할 수 있도록 하는 것이 얼마나
+            중요한지 깨닫게 되었습니다.
+          </p>
+        </section>
+        <section class="story my-vision">
+          <div class="bg-bb"></div>
+          <h1>My vision</h1>
+          <p>
+            디자인의 최우선은 고민이 필요없는 UI/UX라고 생각합니다.<br />
+            가끔 사이트를 보다 보면 디자인에 너무 초점을 둔 나머지 페이지 간의
+            이동이 답답하거나,<br />
+            원하는 정보를 찾기 위해 오랜 시간을 헤매야 하는 경우가 있습니다.<br />
+            정보를 바로 보고 싶은데 한참 다른 동작을 수행해야 보이는 경험은
+            누구에게나 불편합니다.<br /><br />
+            저는 남녀노소 누구나 편하게 둘러볼 수 있는 사이트를 디자인하고
+            싶습니다.<br />
+            사용자에게 직관적이고 쉽게 다가갈 수 있는 디자인을 목표로, 항상
+            사용자 중심의 사고를 잊지 않고 작업에 임하고 있습니다.
+          </p>
+        </section>
+        <section class="skills">
+          <h1>SKILLS</h1>
+          <ul>
+            <li><img src="./img/ps-ico.png" alt="ps" /></li>
+            <li><img src="./img/ai-ico.png" alt="ps" /></li>
+            <li><img src="./img/fig-ico.png" alt="ps" /></li>
+            <li><img src="./img/vs-ico.png" alt="ps" /></li>
+            <li><img src="./img/jquery.png" alt="ps" /></li>
+          </ul>
+        </section>
+      </div>
+    </main>
+  </body>
 </html>
