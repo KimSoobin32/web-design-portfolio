@@ -449,6 +449,11 @@ main > section.section6 {
   width: 870px !important;
 }
 
+.section3 .project-img img {
+  width: 488px;
+  height: 450px;
+}
+
 .section4 .project-img img {
   top: 58%;
   left: 60%;
@@ -923,4 +928,32 @@ main > section.section6 {
   left: 10px;
   position: absolute;
   width: 180px;
+}
+
+.top-btn {
+  display: block;
+  border-radius: 50%;
+
+  text-align: center;
+  padding-top: 20px;
+  width: 50px;
+  height: 50px;
+  background: var(--main-color-dark);
+  color: #fff;
+  font-weight: 600;
+  font-size: 12px;
+  position: fixed;
+  bottom: 90px;
+  right: 90px;
+}
+.top-btn::before {
+  content: '';
+  display: block;
+  background-image: url(../img/up.png);
+  top: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  width: 10px;
+  height: 5px;
 }
