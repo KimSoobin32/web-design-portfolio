@@ -159,4 +159,27 @@ $(function () {
       }
     });
   });
+
+  //top 버튼 클릭하면 이동
+  // 탑 버튼 요소를 jQuery 객체로 선택
+  const $topBtn = $('.top-btn');
+
+  $(window).scroll(function () {
+    // 현재 스크롤 위치와 비교
+    // 스크롤 위치가 200px 이상인 경우 탑 버튼을 보이게 하고, 그렇지 않으면 숨김
+    if ($(this).scrollTop() > 200) {
+      $topBtn.addClass('show');
+    } else {
+      $topBtn.removeClass('show');
+    }
+  });
+
+  $topBtn.on('click', function () {
+    $('html, body').stop().animate(
+      {
+        scrollTop: 0,
+      },
+      500 // 스크롤 속도 조정
+    );
+  });
 });

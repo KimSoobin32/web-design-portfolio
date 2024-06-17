@@ -984,7 +984,7 @@ main > section.section6 {
   border-radius: 50%;
 
   text-align: center;
-  padding-top: 35px;
+  padding-top: 10px;
   /* width: 50px;
   height: 50px; */
   width: 90px;
@@ -997,6 +997,10 @@ main > section.section6 {
   position: fixed;
   bottom: 90px;
   right: 90px;
+  /* transition: 0.4s; */
+
+  opacity: 0; /* 초기에는 보이지 않음 */
+  transition: opacity 0.4s ease; /* 부드러운 페이드 인/아웃 효과 */
 }
 .top-btn::before {
   content: '';
@@ -1010,4 +1014,10 @@ main > section.section6 {
   height: 5px; */
   width: 20px;
   height: 15px;
+}
+.top-btn:hover {
+  background: var(--main-color);
+}
+.top-btn.show {
+  opacity: 1; /* 나타날 때 투명도를 1로 설정하여 나타냄 */
 }
