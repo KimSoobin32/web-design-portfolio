@@ -157,4 +157,27 @@ $(function () {
       requestAnimationFrame(moving);
     }
   }
+
+  //indicator index
+  // 모든 li 요소를 가져옵니다.
+  const indicators = document.querySelectorAll('.indicator li');
+
+  indicators.forEach(function (indicator) {
+    // 각 li 요소에 tooltip 요소를 추가합니다.
+    const tooltip = document.createElement('div');
+    tooltip.classList.add('tooltip');
+    tooltip.textContent = indicator.textContent.trim(); // 각 li의 텍스트를 tooltip의 내용으로 사용
+
+    // li 요소에 tooltip을 자식으로 추가합니다.
+    indicator.appendChild(tooltip);
+
+    // 호버 이벤트를 설정합니다.
+    indicator.addEventListener('mouseenter', function () {
+      tooltip.style.display = 'block';
+    });
+
+    indicator.addEventListener('mouseleave', function () {
+      tooltip.style.display = 'none';
+    });
+  });
 });

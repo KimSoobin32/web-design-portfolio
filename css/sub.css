@@ -42,13 +42,25 @@ main > section.section6 {
   background: #000;
 } */
 .fp-slidesNav {
-  /* right: 0 !important; */
-  left: 50% !important;
-
-  transform: translateX(-50%) !important;
+  width: 1265px;
   display: inline-block;
 }
 
+.fp-slidesNav.bottom {
+  top: 85%;
+
+  right: -500px !important;
+}
+.wrapp {
+  /* background: #55f; */
+  display: flex;
+  gap: 16.5rem;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  justify-content: center;
+  align-items: center;
+}
 .indicator {
   position: fixed;
   top: 50%;
@@ -71,6 +83,8 @@ main > section.section6 {
   /* border: 1px solid var(--bd); */
   transition: 0.3s;
   cursor: pointer;
+
+  position: relative;
 }
 .indicator li.show {
   border: 1px solid var(--bd);
@@ -85,6 +99,26 @@ main > section.section6 {
 }
 .indicator li b {
   display: none;
+}
+
+/* mark */
+.indicator li:hover .tooltip {
+  display: block;
+}
+.tooltip {
+  display: none;
+  position: absolute;
+  top: 50%;
+  right: 150%;
+  transform: translateY(-50%);
+  /* background-color: rgba(0, 0, 0, 0.75); */
+  background-color: var(--main-color);
+  color: white;
+  padding: 5px 15px !important;
+
+  border-radius: 50px;
+  white-space: nowrap;
+  z-index: 10;
 }
 
 .section1 figure {
@@ -935,13 +969,16 @@ main > section.section6 {
   border-radius: 50%;
 
   text-align: center;
-  padding-top: 20px;
-  width: 50px;
-  height: 50px;
+  padding-top: 35px;
+  /* width: 50px;
+  height: 50px; */
+  width: 90px;
+  height: 90px;
   background: var(--main-color-dark);
   color: #fff;
   font-weight: 600;
-  font-size: 12px;
+  /* font-size: 12px; */
+  font-size: 20px;
   position: fixed;
   bottom: 90px;
   right: 90px;
@@ -949,11 +986,13 @@ main > section.section6 {
 .top-btn::before {
   content: '';
   display: block;
-  background-image: url(../img/up.png);
+  background: url(../img/up.png) no-repeat 50% 50%;
   top: 15%;
   left: 50%;
   transform: translateX(-50%);
   position: absolute;
-  width: 10px;
-  height: 5px;
+  /* width: 10px;
+  height: 5px; */
+  width: 20px;
+  height: 15px;
 }
