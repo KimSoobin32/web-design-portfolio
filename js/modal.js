@@ -115,4 +115,48 @@ $(function () {
     indicator.style.borderColor = 'transparent';
     indicator.style.backgroundColor = 'transparent';
   });
+
+  //copy btn
+  const copyButtons = document.querySelectorAll('.copy-btn');
+
+  copyButtons.forEach((button) => {
+    button.addEventListener('click', function () {
+      const textToCopy = this.getAttribute('data-copy-text');
+
+      if (navigator.clipboard) {
+        navigator.clipboard
+          .writeText(textToCopy)
+          .then(() => {
+            // Change button appearance to indicate success
+            this.classList.add('copied');
+
+            // Revert back to original appearance after 2 seconds
+            setTimeout(() => {
+              this.classList.remove('copied');
+            }, 2000);
+          })
+          .catch((err) => {
+            console.error('Failed to copy text: ', err);
+          });
+      } else {
+        // Fallback for browsers that do not support navigator.clipboard
+        const textArea = document.createElement('textarea');
+        textArea.value = textToCopy;
+        document.body.appendChild(textArea);
+        textArea.select();
+        try {
+          document.execCommand('copy');
+          this.classList.add('copied');
+
+          // Revert back to original appearance after 2 seconds
+          setTimeout(() => {
+            this.classList.remove('copied');
+          }, 2000);
+        } catch (err) {
+          console.error('Failed to copy text: ', err);
+        }
+        document.body.removeChild(textArea);
+      }
+    });
+  });
 });

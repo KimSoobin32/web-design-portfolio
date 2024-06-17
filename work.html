@@ -32,8 +32,16 @@
       <div class="contact-info">
         <h2>Kim Soobin</h2>
         <ul>
-          <li>010-1234-5678</li>
-          <li>jwe06120@naver.com</li>
+          <li>010-1234-5678
+            <button class="copy-btn" data-copy-text="010-1234-5678">
+              <span class="copy-icon"></span>
+            </button>
+          </li>
+          <li>jwe06120@naver.com
+            <button class="copy-btn" data-copy-text="jwe06120@naver.com">
+              <span class="copy-icon"></span>
+            </button>
+          </li>
         </ul>
       </div>
       <span class="close" id="contact-close">
@@ -350,7 +358,8 @@
       <div class="modal-dim"></div>
       <div class="modal" id="modal">
         <div class="modal-content">
-          <span class="close" id="close">&times;</span>
+          <!-- <span class="close" id="close">&times;</span> -->
+          <span class="close close-graphic" id="close"></span>
           <img src="./img/graphic-haribo.png" alt="modal image" id="modal-img" />
         </div>
       </div>

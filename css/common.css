@@ -225,12 +225,60 @@ header {
 }
 .contact-info h2 {
   font-size: 2.5rem;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
+  font-weight: 600;
 }
 .contact-info ul li {
-  margin-top: 1.5rem;
   font-size: 1.8rem;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 5px;
 }
+
+.copy-btn {
+  /* background: var(--main); */
+  /* color: white; */
+  border: none;
+  background-color: transparent;
+  /* padding: 5px 10px; */
+  margin-left: 20px;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: 0.3s;
+  background-image: url(../img/copy-black.svg);
+  width: 40px;
+  height: 40px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.copy-btn .copy-icon {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: url('../img/copy-black.svg') no-repeat center center;
+  background-size: contain;
+}
+
+.copy-btn:hover {
+  background-color: var(--skyblue);
+}
+/* .copy-btn:hover.copy-icon {
+  background: url('../img/copy.svg') no-repeat center center;
+} */
+
+.copy-btn.copied .copy-icon {
+  background: url('../img/check-black.svg') no-repeat center center;
+  background-size: contain;
+}
+
+/* .copy-btn.copied {
+  background: #28a745;
+} */
 
 .dim {
   display: none;

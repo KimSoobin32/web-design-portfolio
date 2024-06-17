@@ -51,6 +51,11 @@ main > section.section6 {
 
   right: -500px !important;
 }
+
+#fp-nav ul li a span,
+.fp-slidesNav ul li a span {
+  background: var(--main-color-dark);
+}
 .wrapp {
   /* background: #55f; */
   display: flex;
@@ -113,7 +118,7 @@ main > section.section6 {
   transform: translateY(-50%);
   /* background-color: rgba(0, 0, 0, 0.75); */
   background-color: var(--main-color);
-  color: white;
+  color: #fff;
   padding: 5px 15px !important;
 
   border-radius: 50px;
@@ -424,6 +429,16 @@ main > section.section6 {
   cursor: pointer;
 }
 
+.close.close-graphic {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  background: var(--skyblue) url(../img/ico-close.svg) no-repeat 50% 50%;
+}
+.close.close-graphic:hover {
+  background-color: #80b7ff;
+}
+
 /* ggg */
 
 .project-img {
@@ -458,7 +473,7 @@ main > section.section6 {
   top: 0;
   width: 50px;
   height: 50px;
-  background: #86d3e7;
+  background: #a8b9ff;
   border-radius: 50%;
   z-index: 10;
 }
