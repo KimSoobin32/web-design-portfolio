@@ -19,7 +19,10 @@ $(function () {
   function closeModal(modalName) {
     $(modalName).css('display', 'none');
     $('.dim').css('display', 'none');
-    $('.modal-dim').css('display', 'none');
+    if (modalName === '#modal') {
+      $('.modal-dim').css('display', 'none');
+    }
+
     isContactOpen = false;
   }
 
