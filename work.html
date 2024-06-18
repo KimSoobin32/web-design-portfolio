@@ -1,423 +1,290 @@
 <!DOCTYPE html>
 <html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Work</title>
+    <link rel="stylesheet" href="./css/jquery.fullpage.min.css" />
+    <link rel="stylesheet" href="./css/aos.css" />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/sub.css" />
+    <link rel="stylesheet" href="./css/common.css" />
+    <script src="./js/jquery-3.3.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="./js/jquery.fullpage.min.js"></script>
+    <script src="./js/aos.js"></script>
+    <script src="./js/modal.js"></script>
+    <script src="./js/script.js"></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Work</title>
-  <link rel="stylesheet" href="./css/jquery.fullpage.min.css" />
-  <link rel="stylesheet" href="./css/aos.css" />
-  <link rel="stylesheet" href="./css/reset.css" />
-  <link rel="stylesheet" href="./css/sub.css" />
-  <link rel="stylesheet" href="./css/common.css" />
-  <script src="./js/jquery-3.3.1.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-  <script src="./js/jquery.fullpage.min.js"></script>
-  <script src="./js/aos.js"></script>
-  <script src="./js/modal.js"></script>
-  <script src="./js/script.js"></script>
-</head>
-
-<body>
-  <div class="dim"></div>
-
-  <div class="contact-modal">
-    <div class="contact-content">
-      <!-- <img src="./img/water.svg" alt="modal image" /> -->
-      <div class="ring">
-        <i style="--clr: #b8f0ff"></i>
-        <i style="--clr: #80b7ff"></i>
-        <i style="--clr: #86d3e7"></i>
+  <body>
+    <div class="dim"></div>
+    <div class="modal-dim"></div>
+    <div class="modal" id="modal">
+      <div class="modal-content">
+        <span class="close close-graphic" id="close"></span>
+        <img src="./img/graphic-cherry.png" alt="modal image" id="modal-img" />
       </div>
-      <div class="contact-info">
-        <h2>Kim Soobin</h2>
-        <ul>
-          <li>010-1234-5678
-            <button class="copy-btn" data-copy-text="010-1234-5678">
-              <span class="copy-icon"></span>
-            </button>
-          </li>
-          <li>jwe06120@naver.com
-            <button class="copy-btn" data-copy-text="jwe06120@naver.com">
-              <span class="copy-icon"></span>
-            </button>
-          </li>
-        </ul>
+    </div>
+    <div class="contact-modal">
+      <div class="contact-content">
+        <!-- <img src="./img/water.svg" alt="modal image" /> -->
+        <div class="ring">
+          <i style="--clr: #b8f0ff"></i>
+          <i style="--clr: #80b7ff"></i>
+          <i style="--clr: #86d3e7"></i>
+        </div>
+        <div class="contact-info">
+          <h2>Kim Soobin</h2>
+          <ul>
+            <li>
+              010-1234-5678
+              <button class="copy-btn" data-copy-text="010-1234-5678">
+                <span class="copy-icon"></span>
+              </button>
+            </li>
+            <li>
+              jwe06120@naver.com
+              <button class="copy-btn" data-copy-text="jwe06120@naver.com">
+                <span class="copy-icon"></span>
+              </button>
+            </li>
+          </ul>
+        </div>
+        <span class="close" id="contact-close">
+          <img src="./img/ico-close.svg" alt="" />
+        </span>
       </div>
-      <span class="close" id="contact-close">
-        <img src="./img/ico-close.svg" alt="" />
-      </span>
     </div>
-  </div>
 
-  <ul class="indicator">
-    <li data-menuanchor="section1" class="active">
-      <a href="#section1"><b>Index</b></a>
-    </li>
-    <li data-menuanchor="section2">
-      <a href="#section2"><b>별마로 천문대</b></a>
-    </li>
-    <li data-menuanchor="section3">
-      <a href="#section3"><b>Starship Ent</b></a>
-    </li>
-    <li data-menuanchor="section4">
-      <a href="#section4"><b>Green Sweet</b></a>
-    </li>
-    <li data-menuanchor="section5">
-      <a href="#section5"><b>Micro Web</b></a>
-    </li>
-    <li data-menuanchor="section6">
-      <a href="#section6"><b>Graphics</b></a>
-    </li>
-  </ul>
+    <ul class="indicator">
+      <li data-menuanchor="section1" class="active">
+        <a href="#section1"><b>Index</b></a>
+      </li>
+      <li data-menuanchor="section2">
+        <a href="#section2"><b>별마로 천문대</b></a>
+      </li>
+      <li data-menuanchor="section3">
+        <a href="#section3"><b>Starship Ent</b></a>
+      </li>
+      <li data-menuanchor="section4">
+        <a href="#section4"><b>Green Sweet</b></a>
+      </li>
+      <li data-menuanchor="section5">
+        <a href="#section5"><b>Micro Web</b></a>
+      </li>
+      <li data-menuanchor="section6">
+        <a href="#section6"><b>Graphics</b></a>
+      </li>
+    </ul>
 
-  <header id="header">
-    <div class="inner">
-      <nav class="nav">
-        <ul class="gnb">
-          <li>
-            <a href="./index.html">Home</a>
-          </li>
-          <li>
-            <a href="./aboutMe.html">About me</a>
-          </li>
-          <li>
-            <a href="./work.html" class="active">Work</a>
-          </li>
-          <li>
-            <a href="#" class="contact-btn">Contact</a>
-          </li>
-        </ul>
-        <span class="myName">Kim Soobin</span>
-      </nav>
-    </div>
-  </header>
-  <main id="fullpage">
-    <section class="section section1">
-      <!-- 자동으로 사이에 div 생성됨..
+    <header id="header">
+      <div class="inner">
+        <nav class="nav">
+          <ul class="gnb">
+            <li>
+              <a href="./index.html">Home</a>
+            </li>
+            <li>
+              <a href="./aboutMe.html">About me</a>
+            </li>
+            <li>
+              <a href="./work.html" class="active">Work</a>
+            </li>
+            <li>
+              <a href="#" class="contact-btn">Contact</a>
+            </li>
+          </ul>
+          <span class="myName">Kim Soobin</span>
+        </nav>
+      </div>
+    </header>
+    <main id="fullpage">
+      <section class="section section1">
+        <!-- 자동으로 사이에 div 생성됨..
       td(display:table-cell)는 vertical-align: middle 가능 -->
-      <div class="title-wrap">
-        <figure>
-          <h1>Work</h1>
-          <img src="./img/water.svg" alt="water" />
-        </figure>
-      </div>
-
-      <div class="content-wrap">
-        <article>
-          <h3>계절이 지나가는 하늘</h3>
-          <p>
-            계절이 지나가는 하늘에는 가을로 가득 차 있습니다. 나는 아무 걱정도
-            없이 가을 속의 별들을 다 헬 듯합니다. 가슴 속에 하나 둘 새겨지는
-            별을 이제 다 못 헤는 것은 쉬이 아침이 오는 까닭이요, 내일 밤이
-            남은 까닭이요, 아직 나의 청춘이 다하지 않은 까닭입니다. 계절이
-            지나가는 하늘에는 가을로 가득 차 있습니다.
-          </p>
-        </article>
-        <ul class="index-list">
-          <li>
-            <a href="#section2">01. 별마로천문대</a>
-          </li>
-          <li>
-            <a href="#section3">02. Starship Ent</a>
-          </li>
-          <li>
-            <a href="#section4">03. Green Sweet</a>
-          </li>
-          <li>
-            <a href="#section5">04. Micro Website</a>
-          </li>
-          <li>
-            <a href="#section6">05. Graphics</a>
-          </li>
-        </ul>
-      </div>
-      <div class="img-box"><img src="" /></div>
-    </section>
-
-    <section class="section section2">
-      <div class="num-indicator">
-        <div class="num-wrap">
-          <span class="current-page">1</span>
-          <div class="seperator">/</div>
-          <span class="total-page">5</span>
+        <div class="title-wrap">
+          <figure>
+            <h1>Work</h1>
+            <img src="./img/water.svg" alt="water" />
+          </figure>
         </div>
-        <p>PROJECT</p>
-      </div>
 
-      <figure class="project-img">
-        <div class="bubble byeolmaro"></div>
-        <div class="bubble-small"></div>
-        <img src="./img/byeolmaro.png" alt="byeolmaro" />
-      </figure>
-
-      <div class="project-content">
-        <div class="project-description">
-          <h2>01.</h2>
-          <h2>별마로 천문대</h2>
-          <p>
-            효율적인 컨텐츠의 배치와 관련 이미지의 적극적인 사용을 중점으로
-            하여 별마로 천문대 웹사이트룰 리디자인했고 반응형 사이트로
-            구현하였습니다.
-          </p>
-        </div>
-        <div class="project-info">
-          <ul>
+        <div class="content-wrap">
+          <article>
+            <h3>계절이 지나가는 하늘</h3>
+            <p>
+              계절이 지나가는 하늘에는 가을로 가득 차 있습니다. 나는 아무 걱정도
+              없이 가을 속의 별들을 다 헬 듯합니다. 가슴 속에 하나 둘 새겨지는
+              별을 이제 다 못 헤는 것은 쉬이 아침이 오는 까닭이요, 내일 밤이
+              남은 까닭이요, 아직 나의 청춘이 다하지 않은 까닭입니다. 계절이
+              지나가는 하늘에는 가을로 가득 차 있습니다.
+            </p>
+          </article>
+          <ul class="index-list">
             <li>
-              <dl>
-                <dt>DATE</dt>
-                <dd>24.07~</dd>
-              </dl>
+              <a href="#section2">01. 별마로천문대</a>
             </li>
             <li>
-              <dl>
-                <dt>ROLE</dt>
-                <dd>기획, 디자인, 코딩</dd>
-              </dl>
+              <a href="#section3">02. Starship Ent</a>
             </li>
             <li>
-              <dl>
-                <dt>TOOLS</dt>
-                <dd>Figma, Vscode</dd>
-              </dl>
+              <a href="#section4">03. Green Sweet</a>
+            </li>
+            <li>
+              <a href="#section5">04. Micro Website</a>
+            </li>
+            <li>
+              <a href="#section6">05. Graphics</a>
             </li>
           </ul>
         </div>
-        <div class="btn-wrap">
-          <a href="https://kimsoobin32.github.io/byeolmaro/" target="_blank" class="btn-design">Design</a>
-          <a href="./workImg/byeolmaroProcess.html" target="_blank" class="btn-process">Process</a>
-        </div>
-      </div>
-    </section>
-    <section class="section section3">
-      <div class="num-indicator">
-        <div class="num-wrap">
-          <span class="current-page">1</span>
-          <div class="seperator">/</div>
-          <span class="total-page">5</span>
-        </div>
-        <p>PROJECT</p>
-      </div>
+        <div class="img-box"><img src="" /></div>
+      </section>
 
-      <figure class="project-img">
-        <div class="bubble starship"></div>
-        <div class="bubble-small"></div>
-        <!-- <img src="./img/starship2.svg" alt="byeolmaro" /> -->
-      </figure>
-
-      <div class="project-content">
-        <div class="project-description">
-          <h2>02.</h2>
-          <h2>Starship Ent</h2>
-          <p>
-            계절이 지나가는 하늘에는 가을로 가득 차 있습니다. 나는 아무 걱정도
-            없이 가을 속의 별들을 다 헬 듯합니다. 가슴 속에 하나 둘 새겨지는
-            별을 이제 다 못 헤는 것은 쉬이 아침이 오는 까닭이요
-          </p>
-        </div>
-        <div class="project-info">
-          <ul>
-            <li>
-              <dl>
-                <dt>DATE</dt>
-                <dd>24.07~</dd>
-              </dl>
-            </li>
-            <li>
-              <dl>
-                <dt>ROLE</dt>
-                <dd>기획, 디자인, 코딩</dd>
-              </dl>
-            </li>
-            <li>
-              <dl>
-                <dt>TOOLS</dt>
-                <dd>Figma, Vscode</dd>
-              </dl>
-            </li>
-          </ul>
-        </div>
-        <div class="btn-wrap">
-          <a href="#" class="btn-design">Design</a>
-          <a href="#" class="btn-process">Process</a>
-        </div>
-      </div>
-    </section>
-    <section class="section section4">
-      <div class="num-indicator">
-        <div class="num-wrap">
-          <span class="current-page">1</span>
-          <div class="seperator">/</div>
-          <span class="total-page">5</span>
-        </div>
-        <p>PROJECT</p>
-      </div>
-
-      <figure class="project-img">
-        <div class="bubble greensweet"></div>
-        <div class="bubble-small"></div>
-        <img src="./img/greensweetpng.png" alt="byeolmaro" />
-      </figure>
-
-      <div class="project-content">
-        <div class="project-description">
-          <h2>03.</h2>
-          <h2>Green Sweet</h2>
-          <p>
-            사용자 정보 기반 개인화된 관리 및 다이어리, 상점, 식물사전 등의
-            기능이 분리 되어 있는 등의 개선사항을 보완함과 동시에 직관적이고
-            쉽게 이해할 수 있는 UI를 제공하여 사용자들이 쉽게 식물을 키울 수
-            있도록 도움을 주고자 앱을 기획 및 디자인 했습니다. (팀 프로젝트)
-          </p>
-        </div>
-        <div class="project-info">
-          <ul>
-            <li>
-              <dl>
-                <dt>DATE</dt>
-                <dd>24.07~</dd>
-              </dl>
-            </li>
-            <li>
-              <dl>
-                <dt>ROLE</dt>
-                <dd>기획, 디자인</dd>
-              </dl>
-            </li>
-            <li>
-              <dl>
-                <dt>TOOLS</dt>
-                <dd>Figma</dd>
-              </dl>
-            </li>
-          </ul>
-        </div>
-        <div class="btn-wrap">
-          <a href="https://www.figma.com/proto/uaP9Cpm77UzQaVUEIa5KI1/%EC%8B%9D%EB%AC%BCapp-%EC%99%80%EC%9D%B4%EC%96%B4%ED%94%84%EB%A0%88%EC%9E%84%2C%EB%94%94%EC%9E%90%EC%9D%B8-(Copy)?page-id=790%3A4731&node-id=790-5447&viewport=1308%2C623%2C0.13&t=bdpuWJYQmZrJqo82-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=790%3A5447"
-            target="_blank" class="btn-design">Design</a>
-          <a href="#" class="btn-process">Process</a>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section5">
-      <div class="num-indicator">
-        <div class="num-wrap">
-          <span class="current-page">1</span>
-          <div class="seperator">/</div>
-          <span class="total-page">5</span>
-        </div>
-        <p>PROJECT</p>
-      </div>
-
-      <figure class="project-img">
-        <div class="bubble coco"></div>
-        <div class="bubble-small"></div>
-        <img src="./img/coco.png" alt="coco" />
-      </figure>
-
-      <div class="project-content">
-        <div class="project-description">
-          <h2>04.</h2>
-          <h2>Micro Website</h2>
-          <p>
-            계절이 지나가는 하늘에는 가을로 가득 차 있습니다. 나는 아무 걱정도
-            없이 가을 속의 별들을 다 헬 듯합니다. 가슴 속에 하나 둘 새겨지는
-            별을 이제 다 못 헤는 것은 쉬이 아침이 오는 까닭이요
-          </p>
-        </div>
-        <div class="project-info">
-          <ul>
-            <li>
-              <dl>
-                <dt>DATE</dt>
-                <dd>24.07~</dd>
-              </dl>
-            </li>
-            <li>
-              <dl>
-                <dt>ROLE</dt>
-                <dd>기획, 디자인, 코딩</dd>
-              </dl>
-            </li>
-            <li>
-              <dl>
-                <dt>TOOLS</dt>
-                <dd>Figma, Vscode</dd>
-              </dl>
-            </li>
-          </ul>
-        </div>
-        <div class="btn-wrap">
-          <a href="workImg/coco.html" target="_blank" class="btn-design">Design</a>
-          <a href="#" class="btn-process">Process</a>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section6">
-      <div class="modal-dim"></div>
-      <div class="modal" id="modal">
-        <div class="modal-content">
-          <!-- <span class="close" id="close">&times;</span> -->
-          <span class="close close-graphic" id="close"></span>
-          <img src="./img/graphic-cherry.png" alt="modal image" id="modal-img" />
-        </div>
-      </div>
-      <div class="num-indicator">
-        <div class="num-wrap">
-          <span class="current-page">1</span>
-          <div class="seperator">/</div>
-          <span class="total-page">5</span>
-        </div>
-        <p>PROJECT</p>
-      </div>
-
-      <div class="wrapp">
-        <div class="slider-wrap">
-          <div class="main-slider">
-            <div class="slide">
-              <figure class="project-img">
-                <img src="./img/sun.png" alt="sun" />
-              </figure>
-            </div>
-            <div class="slide">
-              <figure class="project-img">
-                <img src="./img/graphic-cherry.png" alt="cherry" />
-              </figure>
-            </div>
-            <div class="slide">
-              <figure class="project-img">
-                <img src="./img/graphic-burger.png" alt="burger" />
-              </figure>
-            </div>
-            <div class="slide">
-              <figure class="project-img">
-                <img src="./img/black.png" alt="black" />
-              </figure>
-            </div>
-            <div class="slide">
-              <figure class="project-img">
-                <img src="./img/graphic-check.png" alt="check" />
-              </figure>
-            </div>
+      <section class="section section2">
+        <div class="num-indicator">
+          <div class="num-wrap">
+            <span class="current-page">1</span>
+            <div class="seperator">/</div>
+            <span class="total-page">5</span>
           </div>
+          <p>PROJECT</p>
+        </div>
+
+        <figure class="project-img">
+          <div class="bubble byeolmaro"></div>
           <div class="bubble-small"></div>
-          <div class="bubble about-bubble">
-            <a class="bubble-content">
-              <img src="./img/ico-view.svg" alt="view" />
-              <span>Click!</span>
-            </a>
-          </div>
-        </div>
+          <img src="./img/byeolmaro.png" alt="byeolmaro" />
+        </figure>
+
         <div class="project-content">
           <div class="project-description">
-            <h2>05.</h2>
-            <h2>Graphics</h2>
+            <h2>01.</h2>
+            <h2>별마로 천문대</h2>
             <p>
-              포토샵과 일러스트레이터를 활용하여 여러가지 스타일의 배너를
-              디자인하였습니다. 슬라이드 우측 하단 'Click!' 버튼을 통해 해당
-              이미지 원본을 볼 수 있습니다.
+              효율적인 컨텐츠의 배치와 관련 이미지의 적극적인 사용을 중점으로
+              하여 별마로 천문대 웹사이트룰 리디자인했고 반응형 사이트로
+              구현하였습니다.
+            </p>
+          </div>
+          <div class="project-info">
+            <ul>
+              <li>
+                <dl>
+                  <dt>DATE</dt>
+                  <dd>24.07~</dd>
+                </dl>
+              </li>
+              <li>
+                <dl>
+                  <dt>ROLE</dt>
+                  <dd>기획, 디자인, 코딩</dd>
+                </dl>
+              </li>
+              <li>
+                <dl>
+                  <dt>TOOLS</dt>
+                  <dd>Figma, Vscode</dd>
+                </dl>
+              </li>
+            </ul>
+          </div>
+          <div class="btn-wrap">
+            <a
+              href="https://kimsoobin32.github.io/byeolmaro/"
+              target="_blank"
+              class="btn-design"
+              >Design</a
+            >
+            <a
+              href="./workImg/byeolmaroProcess.html"
+              target="_blank"
+              class="btn-process"
+              >Process</a
+            >
+          </div>
+        </div>
+      </section>
+      <section class="section section3">
+        <div class="num-indicator">
+          <div class="num-wrap">
+            <span class="current-page">1</span>
+            <div class="seperator">/</div>
+            <span class="total-page">5</span>
+          </div>
+          <p>PROJECT</p>
+        </div>
+
+        <figure class="project-img">
+          <div class="bubble starship"></div>
+          <div class="bubble-small"></div>
+          <!-- <img src="./img/starship2.svg" alt="byeolmaro" /> -->
+        </figure>
+
+        <div class="project-content">
+          <div class="project-description">
+            <h2>02.</h2>
+            <h2>Starship Ent</h2>
+            <p>
+              계절이 지나가는 하늘에는 가을로 가득 차 있습니다. 나는 아무 걱정도
+              없이 가을 속의 별들을 다 헬 듯합니다. 가슴 속에 하나 둘 새겨지는
+              별을 이제 다 못 헤는 것은 쉬이 아침이 오는 까닭이요
+            </p>
+          </div>
+          <div class="project-info">
+            <ul>
+              <li>
+                <dl>
+                  <dt>DATE</dt>
+                  <dd>24.07~</dd>
+                </dl>
+              </li>
+              <li>
+                <dl>
+                  <dt>ROLE</dt>
+                  <dd>기획, 디자인, 코딩</dd>
+                </dl>
+              </li>
+              <li>
+                <dl>
+                  <dt>TOOLS</dt>
+                  <dd>Figma, Vscode</dd>
+                </dl>
+              </li>
+            </ul>
+          </div>
+          <div class="btn-wrap">
+            <a href="#" class="btn-design">Design</a>
+            <a href="#" class="btn-process">Process</a>
+          </div>
+        </div>
+      </section>
+      <section class="section section4">
+        <div class="num-indicator">
+          <div class="num-wrap">
+            <span class="current-page">1</span>
+            <div class="seperator">/</div>
+            <span class="total-page">5</span>
+          </div>
+          <p>PROJECT</p>
+        </div>
+
+        <figure class="project-img">
+          <div class="bubble greensweet"></div>
+          <div class="bubble-small"></div>
+          <img src="./img/greensweetpng.png" alt="byeolmaro" />
+        </figure>
+
+        <div class="project-content">
+          <div class="project-description">
+            <h2>03.</h2>
+            <h2>Green Sweet</h2>
+            <p>
+              사용자 정보 기반 개인화된 관리 및 다이어리, 상점, 식물사전 등의
+              기능이 분리 되어 있는 등의 개선사항을 보완함과 동시에 직관적이고
+              쉽게 이해할 수 있는 UI를 제공하여 사용자들이 쉽게 식물을 키울 수
+              있도록 도움을 주고자 앱을 기획 및 디자인 했습니다. (팀 프로젝트)
             </p>
           </div>
           <div class="project-info">
@@ -437,19 +304,173 @@
               <li>
                 <dl>
                   <dt>TOOLS</dt>
-                  <dd>Photoshop, Illustrator</dd>
+                  <dd>Figma</dd>
                 </dl>
               </li>
             </ul>
           </div>
+          <div class="btn-wrap">
+            <a
+              href="https://www.figma.com/proto/uaP9Cpm77UzQaVUEIa5KI1/%EC%8B%9D%EB%AC%BCapp-%EC%99%80%EC%9D%B4%EC%96%B4%ED%94%84%EB%A0%88%EC%9E%84%2C%EB%94%94%EC%9E%90%EC%9D%B8-(Copy)?page-id=790%3A4731&node-id=790-5447&viewport=1308%2C623%2C0.13&t=bdpuWJYQmZrJqo82-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=790%3A5447"
+              target="_blank"
+              class="btn-design"
+              >Design</a
+            >
+            <a href="#" class="btn-process">Process</a>
+          </div>
         </div>
-      </div>
-    </section>
-  </main>
+      </section>
 
+      <section class="section section5">
+        <div class="num-indicator">
+          <div class="num-wrap">
+            <span class="current-page">1</span>
+            <div class="seperator">/</div>
+            <span class="total-page">5</span>
+          </div>
+          <p>PROJECT</p>
+        </div>
 
+        <figure class="project-img">
+          <div class="bubble coco"></div>
+          <div class="bubble-small"></div>
+          <img src="./img/coco.png" alt="coco" />
+        </figure>
 
+        <div class="project-content">
+          <div class="project-description">
+            <h2>04.</h2>
+            <h2>Micro Website</h2>
+            <p>
+              계절이 지나가는 하늘에는 가을로 가득 차 있습니다. 나는 아무 걱정도
+              없이 가을 속의 별들을 다 헬 듯합니다. 가슴 속에 하나 둘 새겨지는
+              별을 이제 다 못 헤는 것은 쉬이 아침이 오는 까닭이요
+            </p>
+          </div>
+          <div class="project-info">
+            <ul>
+              <li>
+                <dl>
+                  <dt>DATE</dt>
+                  <dd>24.07~</dd>
+                </dl>
+              </li>
+              <li>
+                <dl>
+                  <dt>ROLE</dt>
+                  <dd>기획, 디자인, 코딩</dd>
+                </dl>
+              </li>
+              <li>
+                <dl>
+                  <dt>TOOLS</dt>
+                  <dd>Figma, Vscode</dd>
+                </dl>
+              </li>
+            </ul>
+          </div>
+          <div class="btn-wrap">
+            <a href="workImg/coco.html" target="_blank" class="btn-design"
+              >Design</a
+            >
+            <a href="#" class="btn-process">Process</a>
+          </div>
+        </div>
+      </section>
 
-</body>
+      <section class="section section6">
+        <!-- <div class="modal-dim"></div> -->
+        <!-- <div class="modal" id="modal">
+          <div class="modal-content">
+            <span class="close close-graphic" id="close"></span>
+            <img
+              src="./img/graphic-cherry.png"
+              alt="modal image"
+              id="modal-img"
+            />
+          </div>
+        </div> -->
+        <div class="num-indicator">
+          <div class="num-wrap">
+            <span class="current-page">1</span>
+            <div class="seperator">/</div>
+            <span class="total-page">5</span>
+          </div>
+          <p>PROJECT</p>
+        </div>
 
+        <div class="wrapp">
+          <div class="slider-wrap">
+            <div class="main-slider">
+              <div class="slide">
+                <figure class="project-img">
+                  <img src="./img/sun.png" alt="sun" />
+                </figure>
+              </div>
+              <div class="slide">
+                <figure class="project-img">
+                  <img src="./img/graphic-cherry.png" alt="cherry" />
+                </figure>
+              </div>
+              <div class="slide">
+                <figure class="project-img">
+                  <img src="./img/graphic-burger.png" alt="burger" />
+                </figure>
+              </div>
+              <div class="slide">
+                <figure class="project-img">
+                  <img src="./img/black.png" alt="black" />
+                </figure>
+              </div>
+              <div class="slide">
+                <figure class="project-img">
+                  <img src="./img/graphic-check.png" alt="check" />
+                </figure>
+              </div>
+            </div>
+            <div class="bubble-small"></div>
+            <div class="bubble about-bubble">
+              <a class="bubble-content">
+                <img src="./img/ico-view.svg" alt="view" />
+                <span>Click!</span>
+              </a>
+            </div>
+          </div>
+          <div class="project-content">
+            <div class="project-description">
+              <h2>05.</h2>
+              <h2>Graphics</h2>
+              <p>
+                포토샵과 일러스트레이터를 활용하여 여러가지 스타일의 배너를
+                디자인하였습니다. 슬라이드 우측 하단 'Click!' 버튼을 통해 해당
+                이미지 원본을 볼 수 있습니다.
+              </p>
+            </div>
+            <div class="project-info">
+              <ul>
+                <li>
+                  <dl>
+                    <dt>DATE</dt>
+                    <dd>24.07~</dd>
+                  </dl>
+                </li>
+                <li>
+                  <dl>
+                    <dt>ROLE</dt>
+                    <dd>기획, 디자인</dd>
+                  </dl>
+                </li>
+                <li>
+                  <dl>
+                    <dt>TOOLS</dt>
+                    <dd>Photoshop, Illustrator</dd>
+                  </dl>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
 </html>
