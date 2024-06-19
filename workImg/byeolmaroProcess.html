@@ -6,9 +6,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>별마로 천문대 프로세스</title>
   <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/sub.css">
   <style>
     .process-pic figure img {
       width: 100%;
+    }
+
+    /* top 버튼 스타일 */
+    .top-btn {
+      background-color: #3440CA;
+    }
+
+    .top-btn:hover {
+      background-color: #86d3e7;
     }
   </style>
 </head>
@@ -17,6 +27,32 @@
   <div class="process-pic">
     <figure><img src="../img/process-byeolmaro.jpg" alt="별마로 프로세스"></figure>
   </div>
+  <!-- Top 버튼 추가 -->
+  <button class="top-btn" id="top-btn">Top</button>
+
+  <script>
+    // JavaScript로 스크롤 애니메이션 구현
+    document.addEventListener('DOMContentLoaded', function () {
+      const topBtn = document.getElementById('top-btn');
+
+      // 스크롤 이벤트 리스너
+      window.addEventListener('scroll', function () {
+        if (window.scrollY > 200) {
+          topBtn.classList.add('show');
+        } else {
+          topBtn.classList.remove('show');
+        }
+      });
+
+      // 버튼 클릭 이벤트 리스너
+      topBtn.addEventListener('click', function () {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
 </body>
 
 </html>

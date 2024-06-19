@@ -47,15 +47,40 @@ main > section.section6 {
 }
 
 .fp-slidesNav.bottom {
-  top: 85%;
+  /* top: 85%; */
 
-  right: -500px !important;
+  /* right: -480px !important; */
+  /* background: #ff5; */
+  position: relative;
+  margin-top: 710px !important;
+}
+#fp-nav ul,
+.fp-slidesNav ul {
+  display: inline-block;
+  margin-left: 300px;
+  /* background: #55f; */
+
+  /* 원의 중심: 600px / 2 = 300px
+콘텐츠의 중심: 111px / 2 = 55.5px
+
+즉, 300px - 55.5px = 244.5px */
+  margin-left: 244.5px;
 }
 
 #fp-nav ul li a span,
 .fp-slidesNav ul li a span {
   background: var(--main-color-dark);
+
+  /* left: 300px !important; */
 }
+
+/* dd */
+/* #fp-nav ul,
+.fp-slidesNav ul {
+  display: inline-block;
+  margin: 0 auto;
+} */
+/* ddd */
 .wrapp {
   /* background: #55f; */
   display: flex;

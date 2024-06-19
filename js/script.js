@@ -33,7 +33,7 @@ $(function () {
     //3.실제 링크에 data-menuanchor="영역이름" 적용 (인디케이터에..)
 
     //* 속도 조절
-    scrollingSpeed: 1000,
+    scrollingSpeed: 700,
     //* 섹션 영역의 콘텐츠 세로 정렬(기본값은 true, false면 세로 정렬 풀림)
     verticalCentered: false,
 
