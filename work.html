@@ -5,22 +5,31 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Work</title>
+
+
+  <link rel="icon" type="image/png" href="./img/surfboard-ico.png" />
   <link rel="stylesheet" href="./css/jquery.fullpage.min.css" />
+  <link rel="stylesheet" href="./lightbox/css/lightbox.css">
   <link rel="stylesheet" href="./css/aos.css" />
   <link rel="stylesheet" href="./css/reset.css" />
   <link rel="stylesheet" href="./css/sub.css" />
   <link rel="stylesheet" href="./css/common.css" />
+
+
+
   <script src="./js/jquery-3.3.1.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
   <script src="./js/jquery.fullpage.min.js"></script>
+  <script src="./lightbox/js/lightbox.js"></script>
   <script src="./js/aos.js"></script>
   <script src="./js/modal.js"></script>
   <script src="./js/script.js"></script>
+
 </head>
 
 <body>
   <div class="dim"></div>
-  <div class="modal-dim"></div>
+  <!-- <div class="modal-dim"></div> -->
   <div class="modal" id="modal">
     <div class="modal-content">
       <span class="close close-graphic" id="close"></span>
@@ -358,7 +367,7 @@
         </div>
         <div class="btn-wrap">
           <a href="workImg/coco.html" target="_blank" class="btn-design">Design</a>
-          <a href="#" class="btn-process">Process</a>
+
         </div>
       </div>
     </section>
@@ -384,42 +393,48 @@
         <p>PROJECT</p>
       </div>
 
+      <!-- https://lokeshdhakar.com/projects/lightbox2/ -->
       <div class="wrapp">
         <div class="slider-wrap">
           <div class="main-slider">
             <div class="slide">
-              <figure class="project-img">
-                <img src="./img/sun.png" alt="sun" />
-              </figure>
+              <a href="./img/sun.png" data-Lightbox="roadtrip">
+                <figure class="project-img">
+                  <img src="./img/sun.png" alt="sun" />
+                </figure>
+              </a>
             </div>
             <div class="slide">
-              <figure class="project-img">
-                <img src="./img/graphic-burger.png" alt="burger" />
-              </figure>
+              <a href="./img/graphic-burger.png" data-Lightbox="roadtrip">
+                <figure class="project-img">
+                  <img src="./img/graphic-burger.png" alt="sun" />
+                </figure>
+              </a>
             </div>
             <div class="slide">
-              <figure class="project-img">
-                <img src="./img/black.png" alt="black" />
-              </figure>
+              <a href="./img/black.png" data-Lightbox="roadtrip">
+                <figure class="project-img">
+                  <img src="./img/black.png" alt="sun" />
+                </figure>
+              </a>
             </div>
             <div class="slide">
-              <figure class="project-img">
-                <img src="./img/graphic-cherry.png" alt="cherry" />
-              </figure>
+              <a href="./img/graphic-cherry.png" data-Lightbox="roadtrip">
+                <figure class="project-img">
+                  <img src="./img/graphic-cherry.png" alt="sun" />
+                </figure>
+              </a>
             </div>
-            <!-- <div class="slide">
-              <figure class="project-img">
-                <img src="./img/graphic-check.png" alt="check" />
-              </figure>
-            </div> -->
+
+
           </div>
           <div class="bubble-small"></div>
-          <div class="bubble about-bubble">
+          <!-- <div class="bubble about-bubble">
             <a class="bubble-content">
               <img src="./img/ico-view.svg" alt="view" />
               <span>Click!</span>
             </a>
-          </div>
+          </div> -->
         </div>
         <div class="project-content">
           <div class="project-description">
@@ -427,8 +442,7 @@
             <h2>Graphics</h2>
             <p>
               포토샵과 일러스트레이터를 활용하여 여러가지 스타일의 배너를
-              디자인하였습니다. 슬라이드 우측 하단 'Click!' 버튼을 통해 해당
-              이미지 원본을 볼 수 있습니다.
+              디자인하였습니다. 슬라이드 이미지를 클릭하면 해당 이미지 원본을 볼 수 있습니다.
             </p>
           </div>
           <div class="project-info">

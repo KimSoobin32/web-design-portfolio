@@ -41,6 +41,7 @@ $(function () {
   // 각 버블 요소에 클릭 이벤트 추가
   $('.bubble').on('click', function () {
     var activeIndex = $('.fp-slidesNav.bottom ul li a.active').parent().index();
+    console.log(activeIndex);
     // 활성화된 슬라이드의 이미지 src를 가져와서 출력
     var src = $('.main-slider .slide')
       .eq(activeIndex)
