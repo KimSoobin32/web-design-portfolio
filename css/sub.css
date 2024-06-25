@@ -577,15 +577,15 @@ main > section.section6 {
 }
 
 .section4 .project-img img {
-  top: 58%;
-  left: 60%;
+  top: 50%;
+  left: 69%;
 }
 .section5 .project-img img {
   /* top: 75%;
   left: 30%; */
-  top: 66px;
-  left: -92px;
-  transform: scale(0.9);
+  top: -24px;
+  left: -35px;
+  transform: scale(0.8);
   max-width: 100%;
 }
 
