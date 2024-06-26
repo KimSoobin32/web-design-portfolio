@@ -119,6 +119,10 @@ main > section.section6 {
 .indicator li.show {
   border: 1px solid var(--bd);
 }
+.indicator li {
+  background-color: #fff;
+  border: 1px solid var(--bd);
+}
 .indicator li.active {
   /* width: 60px; */
   background-color: var(--main-color-dark);
@@ -572,13 +576,16 @@ main > section.section6 {
 .section3 .project-img img {
   /* width: 488px;
   height: 450px; */
-  width: 557px;
-  height: 558px;
+  /* width: 557px;
+  height: 558px; */
+  top: 47%;
+  left: 48%;
 }
 
 .section4 .project-img img {
-  top: 50%;
-  left: 69%;
+  width: 617px;
+  top: 45%;
+  left: 52%;
 }
 .section5 .project-img img {
   /* top: 75%;
